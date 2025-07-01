@@ -1,0 +1,114 @@
+.about {
+  background-color: #0f172a;
+  padding: 100px 20px;
+  color: #cbd5e1;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 320px;
+  height: auto;
+  border-radius: 16px;
+  border: 5px solid #facc15;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 20px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: #facc15;
+  font-weight: bold;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #facc15;
+}
+
+.cv-button {
+  background-color: #facc15;
+  color: #0f172a;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #ffe680;
+  transform: scale(1.05);
+}
+
+/* Fade animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 85%;
+  }
+
+  .tech-icons {
+    justify-content: center;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #facc15;
+  animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+  0% { border-color: transparent; }
+  50% { border-color: #facc15; }
+  100% { border-color: transparent; }
+}

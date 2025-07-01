@@ -1,0 +1,105 @@
+.projects {
+  padding: 100px 40px;
+  background-color: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 40px;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #facc15, #f472b6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background-color: #1e293b;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.project-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.92);
+  color: #facc15;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project-overlay p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #e2e8f0;
+}
+
+.project-overlay a {
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #facc15;
+  color: #0f172a;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.project-overlay a:hover {
+  background-color: #ffe680;
+}
